@@ -1,7 +1,9 @@
 .logo {
-    margin-top: 60px;
-    width: auto;
-    height: auto;
+    position: absolute;
+    width: 399.47px;
+    height: 152.42px;
+    left: 3px;
+    top: 30px;
 }
 
 .ractangle {
@@ -10,7 +12,7 @@
     width: 430.8px;
     height: 416.41px;
     left: -5px;
-    top: 200px;
+    top: 150px;
 }
 
 .start_btn {
@@ -18,7 +20,7 @@
     width: auto;
     height: auto;
     left: 40px;
-    top: 660px;
+    top: 600px;
 }
 
 .size {
