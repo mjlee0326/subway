@@ -1,12 +1,15 @@
 .logo {
-    margin-top: 100px;
+    margin-top: 60px;
+    width: auto;
+    height: auto;
 }
 
 .ractangle {
     position: absolute;
-    margin-top: 50px;
+    margin-top: 10px;
     width: 430.8px;
     height: 416.41px;
+    left: -5px;
     top: 200px;
 }
 
@@ -14,5 +17,16 @@
     position: absolute;
     width: auto;
     height: auto;
-    top: 724px;
+    left: 40px;
+    top: 660px;
+}
+
+.size {
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.size img {
+    max-width: 100%;
 }
