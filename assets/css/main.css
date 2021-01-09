@@ -1,37 +1,34 @@
 .logo {
-    position: absolute;
-    width: auto;
-    height: auto;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
     left: 3px;
-    top: 30px;
+    margin-top: 50px;
 }
 
 .ractangle {
-    position: absolute;
+    max-width: 100%;
     margin-top: 10px;
-    width: 430.8px;
-    height: 416.41px;
-    left: -5px;
-    top: 170px;
+    width: 100%;
+    height: 100%;
+    left: -3px;
 }
 
 .start_btn {
-    position: absolute;
-    width: auto;
-    height: auto;
-    left: 40px;
-    top: 630px;
-}
-
-.size {
-    text-align: center;
-}
-
-.size img {
     max-width: 100%;
+    margin-top: 50px;
+    margin-left: 37px;
+    width: 80%;
+    height: 80%;
 }
 
 html {
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.div-1 {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
 }
