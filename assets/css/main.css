@@ -1,0 +1,20 @@
+.logo {
+    margin-top: 100px;
+}
+
+.ractangle {
+    position: absolute;
+    margin-top: 50px;
+    width: 430.8px;
+    height: 416.41px;
+    left: -10px;
+    top: 200px;
+}
+
+.start_btn {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 69px;
+    top: 724px;
+}
