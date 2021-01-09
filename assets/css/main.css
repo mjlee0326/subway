@@ -30,3 +30,8 @@
 .size img {
     max-width: 100%;
 }
+
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
