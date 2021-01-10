@@ -22,6 +22,7 @@ const index = () => {
         console.log(my_sandwich);
         div_1.style.display = "none";
         div_2.style.display = "block";
+        console.log(sandwich);
         view2();
     };
 };
