@@ -2,6 +2,11 @@
 
 🥙🥙🥙나만의 SUBWAY 샌드위치를 취향에 맞게 골라줘요🥙🥙🥙
 
+<img src="subway_ux.JPG">
+
+⬇ Figma 링크⬇
+https://www.figma.com/file/jqo9SBEwTYbajbTqm4evos/Untitled?node-id=0%3A1
+
 <h1>------개발 중------</h1>
 
 서브웨이 알바만 4년째,,,
