@@ -1,7 +1,21 @@
 const div_1 = document.getElementById("div_1");
 const div_2 = document.getElementById("div_2");
 const div_3 = document.getElementById("div_3");
-var my_sandwich = 0;
+const div_4 = document.getElementById("div_4");
+
+let q1_1 = document.getElementById("q1_1");
+let q1_2 = document.getElementById("q1_2");
+let q2_1 = document.getElementById("q2_1");
+let q2_2 = document.getElementById("q2_2");
+let q3_1 = document.getElementById("q3_1");
+let q3_2 = document.getElementById("q3_2");
+let next_btn = document.getElementById("next_btn");
+
+let qOne = document.getElementById("div_q1");
+let qTwo = document.getElementById("div_q2");
+let qThree = document.getElementById("div_q3");
+
+let my_sandwich = 0;
 const index = () => {
     document.getElementById("start_btn").onclick = () => {
         my_sandwich++;
@@ -12,24 +26,14 @@ const index = () => {
     };
 };
 const view2 = () => {
-    const q1_1 = document.getElementById("q1_1");
-    const q1_2 = document.getElementById("q1_2");
-    const q2_1 = document.getElementById("q2_1");
-    const q2_2 = document.getElementById("q2_2");
-    const q3_1 = document.getElementById("q3_1");
-    const q3_2 = document.getElementById("q3_2");
-
-    const qOne = document.getElementById("div_q1");
-    const qTwo = document.getElementById("div_q2");
-    const qThree = document.getElementById("div_q3");
-
+    console.log("view2");
     qTwo.style.opacity = "10%";
     qThree.style.opacity = "10%";
 
     //qTwo.style.pointerEvents = "none";
     //qThree.style.pointerEvents = "none";
 
-    document.getElementById("q1_1").onclick = () => {
+    q1_1.onclick = () => {
         q1_2.style.opacity = "10%";
         qOne.style.pointerEvents = "none";
         qTwo.style.opacity = "100%";
@@ -38,7 +42,7 @@ const view2 = () => {
         console.log("click q1_1");
         question2();
     };
-    document.getElementById("q1_2").onclick = () => {
+    q1_2.onclick = () => {
         q1_1.style.opacity = "10%";
         qOne.style.pointerEvents = "none";
         qTwo.style.opacity = "100%";
@@ -47,7 +51,7 @@ const view2 = () => {
         question2();
     };
     const question2 = () => {
-        document.getElementById("q2_1").onclick = () => {
+        q2_1.onclick = () => {
             q2_2.style.opacity = "10%";
             qTwo.style.pointerEvents = "none";
             qThree.style.opacity = "100%";
@@ -55,7 +59,7 @@ const view2 = () => {
             console.log("click q2_1");
             question3();
         };
-        document.getElementById("q2_2").onclick = () => {
+        q2_2.onclick = () => {
             q2_1.style.opacity = "10%";
             qTwo.style.pointerEvents = "none";
             qThree.style.opacity = "100%";
@@ -66,17 +70,22 @@ const view2 = () => {
     };
 
     const question3 = () => {
-        document.getElementById("q3_1").onclick = () => {
+        q3_1.onclick = () => {
             q3_2.style.opacity = "10%";
             qThree.style.pointerEvents = "none";
             console.log("click q3_1");
+            handleNextBtn();
         };
-        document.getElementById("q3_2").onclick = () => {
+        q3_2.onclick = () => {
             q3_1.style.opacity = "10%";
             qThree.style.pointerEvents = "none";
             console.log("click q3_2");
+            handleNextBtn();
         };
-        document.getElementById("next_btn").onclick = () => {
+    };
+
+    const handleNextBtn = () => {
+        next_btn.onclick = () => {
             div_2.style.display = "none";
             div_3.style.display = "block";
             view3();
@@ -95,6 +104,7 @@ const view3 = () => {
         q23.style.opacity = "10%";
         q23.style.pointerEvents = "none";
         console.log("click q21");
+        change();
     };
     q22.onclick = () => {
         q21.style.opacity = "10%";
@@ -102,6 +112,7 @@ const view3 = () => {
         q23.style.opacity = "10%";
         q23.style.pointerEvents = "none";
         console.log("click q22");
+        change();
     };
     q23.onclick = () => {
         q21.style.opacity = "10%";
@@ -109,6 +120,29 @@ const view3 = () => {
         q22.style.opacity = "10%";
         q22.style.pointerEvents = "none";
         console.log("click q23");
+        change();
     };
 };
+
+const change = () => {
+    q1_1 = document.getElementById("q31_1");
+    q1_2 = document.getElementById("q31_2");
+    q2_1 = document.getElementById("q32_1");
+    q2_2 = document.getElementById("q32_2");
+    q3_1 = document.getElementById("q33_1");
+    q3_2 = document.getElementById("q33_2");
+
+    qOne = document.getElementById("div_q31");
+    qTwo = document.getElementById("div_q32");
+    qThree = document.getElementById("div_q33");
+
+    next_btn = document.getElementById("next_btn2");
+
+    next_btn.onclick = () => {
+        div_3.style.display = "none";
+        div_4.style.display = "block";
+        view2();
+    };
+};
+
 window.onload = index();

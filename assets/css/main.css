@@ -105,6 +105,11 @@
     margin-bottom: 15px;
 }
 
+/* view 4 */
+#div_4 {
+    display: none;
+}
+
 .next_btn {
     max-width: 100%;
     margin-top: 17px;
