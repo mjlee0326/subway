@@ -41,27 +41,27 @@ const index = () => {
     };
 };
 
-const findMaxCnt = () => {
-    let max = 0;
-    for (i = 1; i < sandwich.length; i++) {
-        // console.log("max:\t" + max + "\t" + sandwich[max].cnt);
-        //console.log("index:\t" + i + "\t" + sandwich[i].cnt);
-        if (parseInt(sandwich[max].cnt) < parseInt(sandwich[i].cnt)) {
-            //      console.log("bigger!!!");
-            max = i;
-        }
-    }
-    console.log("final max index:\t" + max);
-    return max;
-};
-
 const view2 = () => {
-    console.log("view2");
     qTwo.style.opacity = "10%";
     qThree.style.opacity = "10%";
 
     //qTwo.style.pointerEvents = "none";
     //qThree.style.pointerEvents = "none";
+    const change_btnID = () => {
+        if (div_4.style.display === "block") {
+            next_btn = document.getElementById("next_btn3");
+        }
+    };
+    const isView2 = () => {
+        // console.log("isView2 call");
+        if (div_2.style.display === "block") {
+            //   console.log("yes view2");
+            return true;
+        } else {
+            //   console.log("not view2");
+            return false;
+        }
+    };
 
     q1_1.onclick = () => {
         q1_2.style.opacity = "10%";
@@ -69,8 +69,11 @@ const view2 = () => {
         qTwo.style.opacity = "100%";
         q2_1.style.pointerEvents = "block";
         q2_2.style.pointerEvents = "block";
-        console.log("click q1_1");
-        addCnt([0, 1, 3, 5, 6, 9, 14, 15]);
+        //console.log("click q1_1");
+        if (isView2()) {
+            console.log("담백");
+            addCnt([0, 1, 3, 5, 6, 9, 14, 15]);
+        }
         question2();
     };
     q1_2.onclick = () => {
@@ -78,8 +81,11 @@ const view2 = () => {
         qOne.style.pointerEvents = "none";
         qTwo.style.opacity = "100%";
         qTwo.style.pointerEvents = "block";
-        console.log("click q1_2");
-        addCntReverse([0, 1, 3, 5, 6, 9, 14, 15]);
+        //console.log("click q1_2");
+        if (isView2()) {
+            console.log("짭조름");
+            addCntReverse([0, 1, 3, 5, 6, 9, 14, 15]);
+        }
         question2();
     };
     const question2 = () => {
@@ -88,8 +94,11 @@ const view2 = () => {
             qTwo.style.pointerEvents = "none";
             qThree.style.opacity = "100%";
             qThree.style.pointerEvents = "block";
-            console.log("click q2_1");
-            addCnt([2, 3, 6, 7, 8, 11, 12, 14, 15]);
+            //console.log("click q2_1");
+            if (isView2()) {
+                console.log("초딩 입맛");
+                addCnt([2, 3, 6, 7, 8, 11, 12, 14, 15]);
+            }
             question3();
         };
         q2_2.onclick = () => {
@@ -97,8 +106,11 @@ const view2 = () => {
             qTwo.style.pointerEvents = "none";
             qThree.style.opacity = "100%";
             qThree.style.pointerEvents = "block";
-            console.log("click q2_2");
-            addCntReverse([2, 3, 6, 7, 8, 11, 12, 14, 15]);
+            //console.log("click q2_2");
+            if (isView2()) {
+                console.log("어른이 입맛");
+                addCntReverse([2, 3, 6, 7, 8, 11, 12, 14, 15]);
+            }
             question3();
         };
     };
@@ -107,25 +119,25 @@ const view2 = () => {
         q3_1.onclick = () => {
             q3_2.style.opacity = "10%";
             qThree.style.pointerEvents = "none";
-            console.log("click q3_1");
+            //console.log("click q3_1");
             change_btnID();
-            addCnt([2, 3, 4, 5, 7, 8, 11, 14, 15]);
+            if (isView2()) {
+                console.log("가볍게 한 끼");
+                addCnt([2, 3, 4, 5, 7, 8, 11, 14, 15]);
+            }
             handleNextBtn();
         };
         q3_2.onclick = () => {
             q3_1.style.opacity = "10%";
             qThree.style.pointerEvents = "none";
-            console.log("click q3_2");
+            //console.log("click q3_2");
             change_btnID();
-            addCntReverse([2, 3, 4, 5, 7, 8, 11, 14, 15]);
+            if (isView2()) {
+                console.log("든-든 한 끼");
+                addCntReverse([2, 3, 4, 5, 7, 8, 11, 14, 15]);
+            }
             handleNextBtn();
         };
-    };
-
-    const change_btnID = () => {
-        if (div_4.style.display === "block") {
-            next_btn = document.getElementById("next_btn3");
-        }
     };
 
     const handleNextBtn = () => {
@@ -143,8 +155,7 @@ const view2 = () => {
                 document.body.style.backgroundColor = "#009132";
 
                 console.log(sandwich[4].name);
-                const num = findMaxCnt();
-                const sName = sandwich[num].name;
+                const sName = findMaxCnt();
                 console.log(sName);
                 const result = document.getElementById("result");
                 console.log(result);
@@ -166,7 +177,8 @@ const view3 = () => {
         q22.style.pointerEvents = "none";
         q23.style.opacity = "10%";
         q23.style.pointerEvents = "none";
-        console.log("click q21");
+        console.log("곡물");
+        addCnt([1, 5, 6, 9, 13]);
         change();
     };
     q22.onclick = () => {
@@ -174,7 +186,8 @@ const view3 = () => {
         q21.style.pointerEvents = "none";
         q23.style.opacity = "10%";
         q23.style.pointerEvents = "none";
-        console.log("click q22");
+        addCnt([2, 3, 4, 7, 8, 10, 11, 14]);
+        console.log("화이트");
         change();
     };
     q23.onclick = () => {
@@ -182,7 +195,8 @@ const view3 = () => {
         q21.style.pointerEvents = "none";
         q22.style.opacity = "10%";
         q22.style.pointerEvents = "none";
-        console.log("click q23");
+        console.log("플랫");
+        addCnt([0, 12, 15]);
         change();
     };
 };
