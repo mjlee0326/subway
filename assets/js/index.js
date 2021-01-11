@@ -172,6 +172,9 @@ const view3 = () => {
     const q22 = document.getElementById("q22");
     const q23 = document.getElementById("q23");
 
+    const result_bread = document.getElementById("result_bread");
+    let bread;
+
     q21.onclick = () => {
         q22.style.opacity = "10%";
         q22.style.pointerEvents = "none";
@@ -179,6 +182,8 @@ const view3 = () => {
         q23.style.pointerEvents = "none";
         console.log("곡물");
         addCnt([1, 5, 6, 9, 13]);
+        bread = findBread(["허니오트", "위트 브레드"]);
+        result_bread.innerHTML = bread;
         change();
     };
     q22.onclick = () => {
@@ -186,8 +191,10 @@ const view3 = () => {
         q21.style.pointerEvents = "none";
         q23.style.opacity = "10%";
         q23.style.pointerEvents = "none";
-        addCnt([2, 3, 4, 7, 8, 10, 11, 14]);
         console.log("화이트");
+        addCnt([2, 3, 4, 7, 8, 10, 11, 14]);
+        bread = findBread(["화이트 브레드", "파마산 오레가노"]);
+        result_bread.innerHTML = bread;
         change();
     };
     q23.onclick = () => {
@@ -197,6 +204,8 @@ const view3 = () => {
         q22.style.pointerEvents = "none";
         console.log("플랫");
         addCnt([0, 12, 15]);
+        bread = findBread(["플랫 브레드"]);
+        result_bread.innerHTML = bread;
         change();
     };
 };

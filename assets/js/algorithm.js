@@ -17,7 +17,6 @@ const addCntReverse = (arr) => {
         j++;
     }
 
-    //console.log(arrR);
     addCnt(arrR);
 };
 
@@ -35,11 +34,23 @@ const findMaxCnt = () => {
             arr.push(sandwich[i].name);
         }
     }
-    if (max == 0) {
-        arr.push(sandwich[max].name);
+    if (maxCnt === 0) {
+        arr.push(sandwich[0].name);
+    } else {
+        for (i = 0; i < sandwich.length; i++) {
+            if (sandwich[i].cnt === maxCnt) {
+                arr.push(sandwich[i].name);
+            }
+        }
     }
     console.log(`final maxCnt:\t${maxCnt}`);
     console.log(arr);
     console.log(Math.floor(Math.random() + arr.length - 1));
+    return arr[Math.floor(Math.random() + arr.length - 1)];
+};
+
+const findBread = (arr) => {
+    console.log("find Bread call");
+    console.log(arr);
     return arr[Math.floor(Math.random() + arr.length - 1)];
 };
