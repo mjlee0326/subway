@@ -2,6 +2,12 @@ const div_1 = document.getElementById("div_1");
 const div_2 = document.getElementById("div_2");
 const div_3 = document.getElementById("div_3");
 const div_4 = document.getElementById("div_4");
+const div_5 = document.getElementById("div_5");
+
+const div_logo1=document.getElementById('div_0');
+const div_logo2=document.getElementById('div_01');
+
+div_logo2.style.display='none';
 
 let q1_1 = document.getElementById("q1_1");
 let q1_2 = document.getElementById("q1_2");
@@ -75,21 +81,41 @@ const view2 = () => {
             q3_2.style.opacity = "10%";
             qThree.style.pointerEvents = "none";
             console.log("click q3_1");
+            change_btnID();
             handleNextBtn();
         };
         q3_2.onclick = () => {
             q3_1.style.opacity = "10%";
             qThree.style.pointerEvents = "none";
             console.log("click q3_2");
+            change_btnID();
             handleNextBtn();
         };
     };
 
+    const change_btnID=()=>{
+        if(div_4.style.display==='block'){
+            next_btn=document.getElementById('next_btn3');
+        }
+    }
+
     const handleNextBtn = () => {
         next_btn.onclick = () => {
-            div_2.style.display = "none";
-            div_3.style.display = "block";
-            view3();
+            if(div_2.style.display==='block'){
+                console.log('view2 -> view3');
+                div_2.style.display = "none";
+                div_3.style.display = "block";
+                view3();
+            }
+            else{
+                console.log('view4 -> view5');
+                div_4.style.display='none';
+                div_logo1.style.display='none';
+
+                document.body.style.backgroundColor='#009132';
+                div_5.style.display="block";
+                div_logo2.style.display="block";
+            }
         };
     };
 };
