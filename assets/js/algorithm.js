@@ -38,7 +38,6 @@ const findMaxCnt = () => {
     if (max == 0) {
         arr.push(sandwich[max].name);
     }
-    //console.log(`final max index:\t${max}`);
     console.log(`final maxCnt:\t${maxCnt}`);
     console.log(arr);
     console.log(Math.floor(Math.random() + arr.length - 1));
