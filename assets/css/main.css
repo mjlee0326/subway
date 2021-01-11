@@ -122,11 +122,11 @@ html {
     display: none;
 }
 
-#div_relative{
+#div_relative {
     position: relative;
 }
 
-.layout{
+.layout {
     max-width: 100%;
     width: 100%;
     height: 100%;
@@ -135,15 +135,15 @@ html {
     display: block;
 }
 
-.sandwich{
+.sandwich {
     max-width: 100%;
     width: 70%;
     height: 100%;
-    margin-top: 25px;
+    margin-top: 35px;
 }
 
-.div_51{
-    position:absolute;
+.div_51 {
+    position: absolute;
     margin-right: 10px;
     width: 96%;
     height: 100%;
@@ -151,20 +151,28 @@ html {
     text-align: center;
 }
 
-
-@font-face{
-    font-family: 'basic';
-    src:url('../font/SDSamliphopangcheBasic.otf');
+.underline {
+    width: 85%;
 }
 
-@font-face{
-    font-family: 'outline';
-    src: url('../font/SDSamliphopangcheOutline.otf');
+@font-face {
+    font-family: "basic";
+    src: url("../font/SDSamliphopangcheBasic.otf");
 }
-body{
+
+@font-face {
+    font-family: "outline";
+    src: url("../font/SDSamliphopangcheOutline.otf");
+}
+body {
     background-color: #ffffff;
 }
 
-.font{
-    font-family: 'outline';
+#result {
+    font-family: "basic";
+    color: white;
+    letter-spacing: 7px;
+    font-size: 2.5em;
+    margin-top: 1px;
+    margin-bottom: 1px;
 }

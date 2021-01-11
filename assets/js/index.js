@@ -4,10 +4,10 @@ const div_3 = document.getElementById("div_3");
 const div_4 = document.getElementById("div_4");
 const div_5 = document.getElementById("div_5");
 
-const div_logo1=document.getElementById('div_0');
-const div_logo2=document.getElementById('div_01');
+const div_logo1 = document.getElementById("div_0");
+const div_logo2 = document.getElementById("div_01");
 
-div_logo2.style.display='none';
+div_logo2.style.display = "none";
 
 let q1_1 = document.getElementById("q1_1");
 let q1_2 = document.getElementById("q1_2");
@@ -21,17 +21,40 @@ let qOne = document.getElementById("div_q1");
 let qTwo = document.getElementById("div_q2");
 let qThree = document.getElementById("div_q3");
 
-let my_sandwich = 0;
 const index = () => {
+    /* DEBUG AREA */
+
+    /*
+    addCntReverse([2, 3, 6, 7, 8, 11, 12, 14, 15]);
+
+    const num = findMaxCnt();
+    const sName = sandwich[num].name;
+    console.log(sName);
+    */
+
+    /* DEBUG AREA */
+
     document.getElementById("start_btn").onclick = () => {
-        my_sandwich++;
-        console.log(my_sandwich);
         div_1.style.display = "none";
         div_2.style.display = "block";
-        console.log(sandwich);
         view2();
     };
 };
+
+const findMaxCnt = () => {
+    let max = 0;
+    for (i = 1; i < sandwich.length; i++) {
+        // console.log("max:\t" + max + "\t" + sandwich[max].cnt);
+        //console.log("index:\t" + i + "\t" + sandwich[i].cnt);
+        if (parseInt(sandwich[max].cnt) < parseInt(sandwich[i].cnt)) {
+            //      console.log("bigger!!!");
+            max = i;
+        }
+    }
+    console.log("final max index:\t" + max);
+    return max;
+};
+
 const view2 = () => {
     console.log("view2");
     qTwo.style.opacity = "10%";
@@ -47,6 +70,7 @@ const view2 = () => {
         q2_1.style.pointerEvents = "block";
         q2_2.style.pointerEvents = "block";
         console.log("click q1_1");
+        addCnt([0, 1, 3, 5, 6, 9, 14, 15]);
         question2();
     };
     q1_2.onclick = () => {
@@ -55,6 +79,7 @@ const view2 = () => {
         qTwo.style.opacity = "100%";
         qTwo.style.pointerEvents = "block";
         console.log("click q1_2");
+        addCntReverse([0, 1, 3, 5, 6, 9, 14, 15]);
         question2();
     };
     const question2 = () => {
@@ -64,6 +89,7 @@ const view2 = () => {
             qThree.style.opacity = "100%";
             qThree.style.pointerEvents = "block";
             console.log("click q2_1");
+            addCnt([2, 3, 6, 7, 8, 11, 12, 14, 15]);
             question3();
         };
         q2_2.onclick = () => {
@@ -72,6 +98,7 @@ const view2 = () => {
             qThree.style.opacity = "100%";
             qThree.style.pointerEvents = "block";
             console.log("click q2_2");
+            addCntReverse([2, 3, 6, 7, 8, 11, 12, 14, 15]);
             question3();
         };
     };
@@ -82,6 +109,7 @@ const view2 = () => {
             qThree.style.pointerEvents = "none";
             console.log("click q3_1");
             change_btnID();
+            addCnt([2, 3, 4, 5, 7, 8, 11, 14, 15]);
             handleNextBtn();
         };
         q3_2.onclick = () => {
@@ -89,32 +117,40 @@ const view2 = () => {
             qThree.style.pointerEvents = "none";
             console.log("click q3_2");
             change_btnID();
+            addCntReverse([2, 3, 4, 5, 7, 8, 11, 14, 15]);
             handleNextBtn();
         };
     };
 
-    const change_btnID=()=>{
-        if(div_4.style.display==='block'){
-            next_btn=document.getElementById('next_btn3');
+    const change_btnID = () => {
+        if (div_4.style.display === "block") {
+            next_btn = document.getElementById("next_btn3");
         }
-    }
+    };
 
     const handleNextBtn = () => {
         next_btn.onclick = () => {
-            if(div_2.style.display==='block'){
-                console.log('view2 -> view3');
+            if (div_2.style.display === "block") {
+                console.log("view2 -> view3");
                 div_2.style.display = "none";
                 div_3.style.display = "block";
                 view3();
-            }
-            else{
-                console.log('view4 -> view5');
-                div_4.style.display='none';
-                div_logo1.style.display='none';
+            } else {
+                console.log("view4 -> view5");
+                div_4.style.display = "none";
+                div_logo1.style.display = "none";
 
-                document.body.style.backgroundColor='#009132';
-                div_5.style.display="block";
-                div_logo2.style.display="block";
+                document.body.style.backgroundColor = "#009132";
+
+                console.log(sandwich[4].name);
+                const num = findMaxCnt();
+                const sName = sandwich[num].name;
+                console.log(sName);
+                const result = document.getElementById("result");
+                console.log(result);
+                result.innerHTML = sName;
+                div_5.style.display = "block";
+                div_logo2.style.display = "block";
             }
         };
     };
