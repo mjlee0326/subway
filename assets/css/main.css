@@ -164,6 +164,8 @@ html {
     font-family: "outline";
     src: url("../font/SDSamliphopangcheOutline.otf");
 }
+
+
 body {
     background-color: #ffffff;
 }
@@ -186,4 +188,43 @@ body {
     margin-bottom: 0px;
     text-align: left;
     margin-left: 10vw;
+}
+
+#result_source{
+    font-family: "basic";
+    color: white;
+    letter-spacing: 7px;
+    font-size: 8vw;
+    margin-top: 8vw;
+    margin-bottom: 0px;
+    text-align: left;
+    margin-left: 10vw;
+}
+
+#result_topping{
+    font-family: "basic";
+    color: #FFC20D;
+    letter-spacing: 3px;
+    font-size: 7.3vw;
+    margin-top: 4vw;
+    margin-bottom: 0px;
+    text-align: left;
+    margin-left: 27vw;
+}
+
+#more{
+    font-family: "basic";
+    color: white;
+    letter-spacing: 3px;
+    font-size: 7.3vw;
+    margin-top: 4vw;
+    margin-bottom: 0px;
+    text-align: left;
+    margin-left: 27vw;
+}
+
+.restart_btn{
+    text-align: left;
+    margin-left: 50vw;
+    margin-top: 5vw;
 }

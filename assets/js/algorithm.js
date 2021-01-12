@@ -20,6 +20,32 @@ const addCntReverse = (arr) => {
     addCnt(arrR);
 };
 
+const findSandwichIndex=()=>{
+    sIndex=sandwich.findIndex(obj=>obj.name === sName);
+    console.log(`sName: ${sName}, sIndex: ${sIndex}`);
+    return sIndex;
+}
+
+const changeSource=(index)=>{
+    switch(index){
+        case 1:
+            if(sandwich[sIndex].isRanch){
+                sandwich[sIndex].source=['스위트 어니언', '랜치'];
+            }
+            else{
+                sandwich[sIndex].source=['후추', '올리브 오일'];
+            }
+            break;
+        case 2:
+            sandwich[sIndex].source[0]='사우스웨스트';
+            break; 
+        case 3:
+            sandwich[sIndex].source[1]='핫칠리';
+            break;
+    }
+}
+
+
 const findMaxCnt = () => {
     let max = 0;
     let maxCnt = sandwich[max].cnt;
@@ -31,7 +57,6 @@ const findMaxCnt = () => {
             //      console.log("bigger!!!");
             maxCnt = sandwich[i].cnt;
             max = i;
-            arr.push(sandwich[i].name);
         }
     }
     if (maxCnt === 0) {
@@ -49,8 +74,28 @@ const findMaxCnt = () => {
     return arr[Math.floor(Math.random() + arr.length - 1)];
 };
 
-const findBread = (arr) => {
-    console.log("find Bread call");
+const findRandom = (arr) => {
     console.log(arr);
     return arr[Math.floor(Math.random() + arr.length - 1)];
 };
+
+const makeResult=()=>{
+    sName = findMaxCnt();
+    sIndex=findSandwichIndex();
+    console.log(sName);
+    console.log(sIndex);
+    const result = document.getElementById("result");
+    console.log(result);
+    result.innerHTML = sName;
+}
+
+const makeSource=()=>{
+    const result_source=document.getElementById('result_source');
+    result_source.innerHTML=sandwich[sIndex].source;
+}
+
+const makeTopping=()=>{
+    console.log(`topping: ${topping}`);
+    const result_topping=document.getElementById('result_topping');
+    result_topping.innerHTML=topping;
+}

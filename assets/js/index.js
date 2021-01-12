@@ -16,10 +16,16 @@ let q2_2 = document.getElementById("q2_2");
 let q3_1 = document.getElementById("q3_1");
 let q3_2 = document.getElementById("q3_2");
 let next_btn = document.getElementById("next_btn");
+const restart_btn=document.getElementById("restart_btn");
 
 let qOne = document.getElementById("div_q1");
 let qTwo = document.getElementById("div_q2");
 let qThree = document.getElementById("div_q3");
+
+let sName;
+let sIndex;
+let topping;
+
 
 const index = () => {
     /* DEBUG AREA */
@@ -74,6 +80,9 @@ const view2 = () => {
             console.log("담백");
             addCnt([0, 1, 3, 5, 6, 9, 14, 15]);
         }
+        else{
+            console.log('자극적으로');
+        }
         question2();
     };
     q1_2.onclick = () => {
@@ -85,6 +94,10 @@ const view2 = () => {
         if (isView2()) {
             console.log("짭조름");
             addCntReverse([0, 1, 3, 5, 6, 9, 14, 15]);
+        }
+        else{
+            console.log('순하게');
+            changeSource(1);
         }
         question2();
     };
@@ -99,6 +112,9 @@ const view2 = () => {
                 console.log("초딩 입맛");
                 addCnt([2, 3, 6, 7, 8, 11, 12, 14, 15]);
             }
+            else{
+                console.log('익숙한 맛');
+            }
             question3();
         };
         q2_2.onclick = () => {
@@ -110,6 +126,10 @@ const view2 = () => {
             if (isView2()) {
                 console.log("어른이 입맛");
                 addCntReverse([2, 3, 6, 7, 8, 11, 12, 14, 15]);
+            }
+            else{
+                console.log('살짝 새롭게');
+                changeSource(2);
             }
             question3();
         };
@@ -125,6 +145,10 @@ const view2 = () => {
                 console.log("가볍게 한 끼");
                 addCnt([2, 3, 4, 5, 7, 8, 11, 14, 15]);
             }
+            else{
+                console.log('맵부심 가득');
+                changeSource(3);
+            }
             handleNextBtn();
         };
         q3_2.onclick = () => {
@@ -136,9 +160,30 @@ const view2 = () => {
                 console.log("든-든 한 끼");
                 addCntReverse([2, 3, 4, 5, 7, 8, 11, 14, 15]);
             }
+            else{
+                console.log('맵찔이');
+            }
             handleNextBtn();
         };
     };
+    
+    const restart=()=>{
+        console.log("possible restart");
+        restart_btn.onclick=()=>{
+            console.log('restart');
+            /*
+            div_5.style.display = "none";
+            div_logo2.style.display = "none";
+
+            div_1.style.display='block';
+            div_logo1.style.display='block';
+            document.body.style.backgroundColor = 'white'; 
+            
+            index();
+            */
+           window.location.reload(true);
+        }
+    }
 
     const handleNextBtn = () => {
         next_btn.onclick = () => {
@@ -146,26 +191,28 @@ const view2 = () => {
                 console.log("view2 -> view3");
                 div_2.style.display = "none";
                 div_3.style.display = "block";
+                makeResult();
                 view3();
             } else {
                 console.log("view4 -> view5");
+                makeSource();
+                topping="'"+findRandom(toppingList)+"'";
+                makeTopping();
                 div_4.style.display = "none";
                 div_logo1.style.display = "none";
 
                 document.body.style.backgroundColor = "#009132";
 
-                console.log(sandwich[4].name);
-                const sName = findMaxCnt();
-                console.log(sName);
-                const result = document.getElementById("result");
-                console.log(result);
-                result.innerHTML = sName;
                 div_5.style.display = "block";
                 div_logo2.style.display = "block";
+                restart();
+
             }
         };
     };
 };
+
+
 
 const view3 = () => {
     const q21 = document.getElementById("q21");
@@ -182,7 +229,7 @@ const view3 = () => {
         q23.style.pointerEvents = "none";
         console.log("곡물");
         addCnt([1, 5, 6, 9, 13]);
-        bread = findBread(["허니오트", "위트 브레드"]);
+        bread = findRandom(["허니오트", "위트 브레드"]);
         result_bread.innerHTML = bread;
         change();
     };
@@ -193,7 +240,7 @@ const view3 = () => {
         q23.style.pointerEvents = "none";
         console.log("화이트");
         addCnt([2, 3, 4, 7, 8, 10, 11, 14]);
-        bread = findBread(["화이트 브레드", "파마산 오레가노"]);
+        bread = findRandom(["화이트 브레드", "파마산 오레가노"]);
         result_bread.innerHTML = bread;
         change();
     };
@@ -204,7 +251,7 @@ const view3 = () => {
         q22.style.pointerEvents = "none";
         console.log("플랫");
         addCnt([0, 12, 15]);
-        bread = findBread(["플랫 브레드"]);
+        bread = findRandom(["플랫 브레드"]);
         result_bread.innerHTML = bread;
         change();
     };
