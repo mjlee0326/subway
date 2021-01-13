@@ -7,6 +7,9 @@ const div_5 = document.getElementById("div_5");
 const div_logo1 = document.getElementById("div_0");
 const div_logo2 = document.getElementById("div_01");
 
+const loading=document.getElementById('loading');
+loading.style.display='none';
+
 div_logo2.style.display = "none";
 
 let q1_1 = document.getElementById("q1_1");
@@ -194,22 +197,31 @@ const view2 = () => {
                 makeResult();
                 view3();
             } else {
-                console.log("view4 -> view5");
-                makeSource();
-                topping="'"+findRandom(toppingList)+"'";
-                makeTopping();
-                makeImage();
-                div_4.style.display = "none";
-                div_logo1.style.display = "none";
-
-                document.body.style.backgroundColor = "#009132";
-
-                div_5.style.display = "block";
-                div_logo2.style.display = "block";
-                restart();
-
+                goToLoading();
             }
         };
+
+        const goToLoading=()=>{
+            div_4.style.display = "none";
+            div_logo1.style.display = "none";
+            document.body.style.backgroundColor = "#009132";
+            loading.style.display='block';
+            makeSource();
+            topping="'"+findRandom(toppingList)+"'";
+            makeTopping();
+            makeImage();
+            setTimeout(()=>{goToDiv5()}, 1500);
+        }
+
+        const goToDiv5=()=>{
+            console.log('goToDiv5');
+            loading.style.display='none';
+
+            div_5.style.display = "block";
+            div_logo2.style.display = "block";
+            restart();
+
+        }
     };
 };
 
