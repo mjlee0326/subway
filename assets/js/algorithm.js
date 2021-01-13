@@ -70,13 +70,13 @@ const findMaxCnt = () => {
     }
     console.log(`final maxCnt:\t${maxCnt}`);
     console.log(arr);
-    console.log(Math.floor(Math.random() + arr.length - 1));
-    return arr[Math.floor(Math.random() + arr.length - 1)];
+    console.log(Math.floor(Math.random() * arr.length));
+    return arr[Math.floor(Math.random() * arr.length)];
 };
 
 const findRandom = (arr) => {
     console.log(arr);
-    return arr[Math.floor(Math.random() + arr.length - 1)];
+    return arr[Math.floor(Math.random() * arr.length)];
 };
 
 const makeResult=()=>{
@@ -91,7 +91,12 @@ const makeResult=()=>{
 
 const makeSource=()=>{
     const result_source=document.getElementById('result_source');
-    result_source.innerHTML=sandwich[sIndex].source;
+    result_source.innerHTML=sandwich[sIndex].source[0]+'<br>'+sandwich[sIndex].source[1]
+}
+
+const makeImage=()=>{
+    const image=document.getElementById('sandwich');
+    image.innerHTML=`<img class=\'sandwich\' src= \'assets/img/sandwich/${sandwich[sIndex].num}.png\'>`;
 }
 
 const makeTopping=()=>{

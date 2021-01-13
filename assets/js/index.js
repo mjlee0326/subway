@@ -198,6 +198,7 @@ const view2 = () => {
                 makeSource();
                 topping="'"+findRandom(toppingList)+"'";
                 makeTopping();
+                makeImage();
                 div_4.style.display = "none";
                 div_logo1.style.display = "none";
 

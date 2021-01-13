@@ -195,7 +195,7 @@ body {
     color: white;
     letter-spacing: 7px;
     font-size: 8vw;
-    margin-top: 8vw;
+    margin-top: 2vw;
     margin-bottom: 0px;
     text-align: left;
     margin-left: 10vw;
@@ -206,7 +206,7 @@ body {
     color: #FFC20D;
     letter-spacing: 3px;
     font-size: 7.3vw;
-    margin-top: 4vw;
+    margin-top: 2vw;
     margin-bottom: 0px;
     text-align: left;
     margin-left: 27vw;
@@ -217,7 +217,7 @@ body {
     color: white;
     letter-spacing: 3px;
     font-size: 7.3vw;
-    margin-top: 4vw;
+    margin-top: 2vw;
     margin-bottom: 0px;
     text-align: left;
     margin-left: 27vw;
@@ -225,6 +225,7 @@ body {
 
 .restart_btn{
     text-align: left;
-    margin-left: 50vw;
-    margin-top: 5vw;
+    width: 52%;
+    margin-left: 42vw;
+    margin-top: 10vw;
 }
