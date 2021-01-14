@@ -1,4 +1,4 @@
-source
+sauce
 
 랜치, 마요네즈, 스위트 어니언, 허니 머스타드, 스위트 칠리, 핫 칠리, 사우스웨스트, 스모크 바비큐, 올리브 오일, 후추
 
@@ -21,7 +21,7 @@ source
 사우스웨스트 추가
 
 const sandwich=[];
-add source value 
+add sauce value 
 
 
 스테이크: '바베큐', '허니머스타드' isRanch 

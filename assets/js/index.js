@@ -100,7 +100,7 @@ const view2 = () => {
         }
         else{
             console.log('순하게');
-            changeSource(1);
+            changeSauce(1);
         }
         question2();
     };
@@ -132,7 +132,7 @@ const view2 = () => {
             }
             else{
                 console.log('살짝 새롭게');
-                changeSource(2);
+                changeSauce(2);
             }
             question3();
         };
@@ -150,7 +150,7 @@ const view2 = () => {
             }
             else{
                 console.log('맵부심 가득');
-                changeSource(3);
+                changeSauce(3);
             }
             handleNextBtn();
         };
@@ -206,7 +206,7 @@ const view2 = () => {
             div_logo1.style.display = "none";
             document.body.style.backgroundColor = "#009132";
             loading.style.display='block';
-            makeSource();
+            makeSauce();
             topping="'"+findRandom(toppingList)+"'";
             makeTopping();
             makeImage();

@@ -26,21 +26,21 @@ const findSandwichIndex=()=>{
     return sIndex;
 }
 
-const changeSource=(index)=>{
+const changeSauce=(index)=>{
     switch(index){
         case 1:
             if(sandwich[sIndex].isRanch){
-                sandwich[sIndex].source=['스위트 어니언', '랜치'];
+                sandwich[sIndex].sauce=['스위트 어니언', '랜치'];
             }
             else{
-                sandwich[sIndex].source=['후추', '올리브 오일'];
+                sandwich[sIndex].sauce=['후추', '올리브 오일'];
             }
             break;
         case 2:
-            sandwich[sIndex].source[0]='사우스웨스트';
+            sandwich[sIndex].sauce[0]='사우스웨스트';
             break; 
         case 3:
-            sandwich[sIndex].source[1]='핫칠리';
+            sandwich[sIndex].sauce[1]='핫칠리';
             break;
     }
 }
@@ -89,9 +89,9 @@ const makeResult=()=>{
     result.innerHTML = sName;
 }
 
-const makeSource=()=>{
-    const result_source=document.getElementById('result_source');
-    result_source.innerHTML=sandwich[sIndex].source[0]+'<br>'+sandwich[sIndex].source[1]
+const makeSauce=()=>{
+    const result_sauce=document.getElementById('result_sauce');
+    result_sauce.innerHTML=sandwich[sIndex].sauce[0]+'<br>'+sandwich[sIndex].sauce[1]
 }
 
 const makeImage=()=>{
