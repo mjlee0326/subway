@@ -1,14 +1,13 @@
 # subway
 
+<h1>MY SUBWAY PICK</h1>
+
 🥙🥙🥙나만의 SUBWAY 샌드위치를 취향에 맞게 골라줘요🥙🥙🥙
 
 <img src="subway_ux.png">
 
 ⬇ Figma 링크⬇
-
 https://www.figma.com/file/jqo9SBEwTYbajbTqm4evos/Untitled?node-id=0%3A1
-
-<h1>------개발 중------</h1>
 
 서브웨이 알바만 4년째,,,
 
@@ -20,4 +19,4 @@ https://www.figma.com/file/jqo9SBEwTYbajbTqm4evos/Untitled?node-id=0%3A1
 
 모바일 전용 + 아이폰X chrome에서 가장 최적화되도록 작업했습니다 :)
 
-(내가 Xs를 쓰고 있기 때문,,,나중에 업데이트 예정)
+(내가 Xs를 쓰고 있기 때문,,,)
