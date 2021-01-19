@@ -19,4 +19,3 @@ https://www.figma.com/file/jqo9SBEwTYbajbTqm4evos/Untitled?node-id=0%3A1
 
 모바일 전용 + 아이폰X chrome에서 가장 최적화되도록 작업했습니다 :)
 
-(내가 Xs를 쓰고 있기 때문,,,)
